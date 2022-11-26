@@ -1,19 +1,19 @@
-import random
-min=int(input("enter a lower range number:"))
-max=int(input("enter a higher range number:"))
-prime=0
-composite=0
-for x in range(min,max+1):
-    flag = False
-    if x > 1:
-        for i in range(2, x):
-            if (x % i) == 0:
-                flag =True
-                break
-    if flag:
-        print(x,"is composite or not prime")
-        composite=composite+1
+a,b=input("Enter the range: ").split(",")
+a=int(a)
+b=int(b)
+c=""
+count=prime=0
+for a in range(a,b+1):
+    for b in range(2,a):
+        if a%b==0:
+            c="composte"
+            break
     else:
-        print(x,"is prime ")
-        prime=prime+1
-print(prime,"prime and ",composite,"composite numbers in the range")
+            c="prime"
+    if c=="prime":
+        prime+=1
+        print(a,"is prime")
+    else:
+        count+=1
+        print(a,"is composite")
+print("count:",prime,"prime and",count,"composite numbers in the range")
