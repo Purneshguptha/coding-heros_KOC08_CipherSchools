@@ -1,4 +1,4 @@
-a,b=input("Enter the range: ").split(",")
+a,b=input("Range is: ").split(",")
 a=int(a)
 b=int(b)
 c=""
@@ -6,14 +6,14 @@ count=prime=0
 for a in range(a,b+1):
     for b in range(2,a):
         if a%b==0:
-            c="composte"
+            c="composite"
             break
-    else:
+        else:
             c="prime"
     if c=="prime":
         prime+=1
         print(a,"is prime")
     else:
-        count+=1
+        count += 1
         print(a,"is composite")
 print("count:",prime,"prime and",count,"composite numbers in the range")
